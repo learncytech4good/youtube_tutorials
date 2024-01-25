@@ -205,7 +205,7 @@ Remember to adjust file names and version numbers if they've been updated since 
 4. **Untar the Package**
    - Extract the downloaded package:
      ```bash
-     tar xvzf splunk-9.1.1-64e843ea36b1-Linux-x86_64.tgz -C /opt
+     tar xvzf splunk-9.1.3-d95b3299fa65-Linux-x86_64.tgz -C /opt
      ```
 
 4. **Start and Accept the License**

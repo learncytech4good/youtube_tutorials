@@ -75,7 +75,7 @@ This guide offers step-by-step instructions for setting up a lab environment usi
 Open a terminal or command prompt:
 - Paste the copied wget command:
 ```bash
-wget -O splunk-9.1.1-64e843ea36b1-Linux-x86_64.tgz "https://download.splunk.com/products/splunk/releases/9.1.1/linux/splunk-9.1.1-64e843ea36b1-Linux-x86_64.tgz"
+wget -O splunk-9.1.3-d95b3299fa65-Linux-x86_64.tgz "https://download.splunk.com/products/splunk/releases/9.1.3/linux/splunk-9.1.3-d95b3299fa65-Linux-x86_64.tgz"
 ```
 - Hit Enter to execute the command.
 - This will download the Splunk Enterprise .tgz file to your current directory.
@@ -199,7 +199,7 @@ Remember to adjust file names and version numbers if they've been updated since 
 3. **Download Splunk Enterprise**
    - Run the `wget` command to download Splunk Enterprise:
      ```bash
-     wget -O splunk-9.1.1-64e843ea36b1-Linux-x86_64.tgz "https://download.splunk.com/products/splunk/releases/9.1.1/linux/splunk-9.1.1-64e843ea36b1-Linux-x86_64.tgz"
+     wget -O splunk-9.1.3-d95b3299fa65-Linux-x86_64.tgz "https://download.splunk.com/products/splunk/releases/9.1.3/linux/splunk-9.1.3-d95b3299fa65-Linux-x86_64.tgz"
      ```
 
 4. **Untar the Package**

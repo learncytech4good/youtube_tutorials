@@ -3,7 +3,7 @@
 *Overview:*
 This Oracle Virtual Box setup serves as a practical lab that you can follow to learn how to set up on your laptop.
 
-Here is the YouTube tutorial link: [Splunk Indexer Clustering via Oracle VM Virtualbox]([https://www.youtube.com/@LearnCyTech4Good/playlists](https://www.youtube.com/watch?v=Qyk1DbW1Qm4&list=PL51SoF0E-Ze3u9T49UXmDeo-Wv_WTAeMw))
+Here is the YouTube tutorial link: [Splunk Indexer Clustering via Oracle VM Virtualbox](https://www.youtube.com/watch?v=Qyk1DbW1Qm4&list=PL51SoF0E-Ze3u9T49UXmDeo-Wv_WTAeMw))
 
 ## Architecture Diagram
 

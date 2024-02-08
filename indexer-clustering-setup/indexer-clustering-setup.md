@@ -377,7 +377,7 @@
 8. **Verification**
    - Verify that the index is reflected on each indexer in the cluster.
 
-# Indexer Cluster Management Commands
+# Indexer Clustering Management Commands
 
 ## Command Reference
 

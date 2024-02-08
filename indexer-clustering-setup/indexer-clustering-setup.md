@@ -1,4 +1,4 @@
-# Indexer Cluster
+# Indexer Clustering Setup and Configuration
 
 | Hostname       | IP Address | URL                       | Replication Port |
 |----------------|------------|---------------------------|------------------|

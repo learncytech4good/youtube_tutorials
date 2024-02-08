@@ -376,3 +376,17 @@
     ```
 8. **Verification**
    - Verify that the index is reflected on each indexer in the cluster.
+
+# Indexer Cluster Management Commands
+
+## Command Reference
+
+This documentation provides a set of commands for managing a Splunk clustered environment. These commands help in configuring, validating, applying, and monitoring cluster bundles.
+
+| Command                               | Description                                      |
+|---------------------------------------|--------------------------------------------------|
+| `./splunk edit cluster-config`        | Edit the cluster configuration in Splunk.        |
+| `./splunk validate cluster-bundle --check-restart` | Validate a cluster bundle before applying, checking for restart issues. |
+| `./splunk apply cluster-bundle`       | Apply a cluster bundle in the Splunk environment. |
+| `./splunk show cluster-bundle-status` | Display the status of the cluster bundle on each node. |
+| `./splunk rollback cluster-bundle`    | Rollback or revert the applied cluster bundle to a previous state. |

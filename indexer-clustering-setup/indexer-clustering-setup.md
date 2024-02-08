@@ -1,4 +1,14 @@
-# Indexer Clustering Setup and Configuration
+# Splunk Indexer Clustering
+
+## Architecture Diagram
+
+This diagram shows a high-level view of the architecture for an indexer cluster.
+
+![indexer_clustering_diagram](https://github.com/mekelz/indexer_cluster/assets/110712766/7e93ded2-dd00-4350-972e-9591c2d8f8fa)
+
+## Virtual Machine Host Information
+
+This table provide information about the unique hostnames, IP addresses, and URLs for accessing Splunk Web. Additionally, replication ports are specified for certain hosts. Here's a breakdown of the information we used on our tutorial:
 
 | Hostname       | IP Address | URL                       | Replication Port |
 |----------------|------------|---------------------------|------------------|
@@ -6,6 +16,8 @@
 | splk-idk-01    | 10.0.0.221 | [https://10.0.0.221:8000/](https://10.0.0.221:8000/) | 8090             |
 | splk-idk-02    | 10.0.0.222 | [https://10.0.0.222:8000/](https://10.0.0.222:8000/) | 8090             |
 | splk-idk-03    | 10.0.0.223 | [https://10.0.0.223:8000/](https://10.0.0.223:8000/) | 8090             |
+
+# Setup and Configuration Guide
 
 ## Configuring Manager Node
 
@@ -184,7 +196,7 @@
 
     Example:
     ```bash
-    ./splunk edit cluster-config -mode peer -manager_uri https://10.0.0.210:8089 -replication_port 8090 -secret s3cr3t@123
+    ./splunk edit cluster-config -mode peer -manager_uri https://10.0.0.220:8089 -replication_port 8090 -secret s3cr3t@123
     ```
     *Replace `s3cr3t@123` with your preferred secret.*
 
@@ -244,11 +256,36 @@
 
 ## Configuring Search Head Node
 
+### Method 1: Splunk Web
+
 `Note: This method is intended for each search head cluster member.`
 
-### Method 1: Command Line
+1. **Access Splunk Web:**
+   - Navigate to your Splunk instance URL.
+   - Log in with appropriate credentials.
 
-`Note: This method is intended for each peer node or indexer cluster member.`
+2. **Navigate to Indexer Clustering:**
+   - Go to `Settings` -> `Indexer Clustering`.
+
+3. **Enable Indexer Clustering:**
+   - Click on "Enable indexer clustering" to begin the configuration.
+
+4. **Configure Search Head Node:**
+   - Follow prompts to select the manager node and proceed by clicking "Next".
+
+5. **Configure Search Head Node Settings:**
+   - Define configurations for "Peer Node Configuration":
+     - **Manager URI**: Enter the Uniform Resource Identifier (URI) for the manager node.
+     - **Security key**: Set up a security key for communication between nodes.
+   - Click on "Enable Peer Node" to apply settings.
+
+6. **Restart Splunk:**
+   - Go to "Settings" > "Server controls."
+   - Click on "Restart Splunk" to apply the changes made.
+
+### Method 2: Command Line
+
+`Note: This method is intended for each search head cluster member.`
 
 1. **Access Command Line Interface:**
    - Open a terminal or command prompt.
@@ -274,7 +311,7 @@
 
     Example:
     ```bash
-    ./splunk edit cluster-config -mode searchhead -master_uri https://10.0.0.210:8089 -secret s3cr3t@123
+    ./splunk edit cluster-config -mode searchhead -master_uri https://10.0.0.220:8089 -secret s3cr3t@123
     ```
     *Replace `s3cr3t@123` with your preferred secret.*
 
@@ -286,7 +323,7 @@
      ```bash
      /opt/splunk/bin/./splunk restart
      ```
-### Method 2: Configuration File
+### Method 3: Configuration File
 
 `Note: This method is intended for each search head cluster member.`
 
@@ -329,7 +366,7 @@
      /opt/splunk/bin/./splunk restart
      ```
 
-## Test and Manage Indexer Cluster
+## Configuring Indexes
 
 1. **Access Command Line Interface:**
    - Open a terminal or command prompt.
@@ -376,4 +413,3 @@
     ```
 8. **Verification**
    - Verify that the index is reflected on each indexer in the cluster.
-

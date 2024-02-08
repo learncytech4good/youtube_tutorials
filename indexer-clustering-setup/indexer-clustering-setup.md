@@ -398,3 +398,14 @@ The following table outlines key directories in the index clustering file struct
 | `$SPLUNK_HOME/etc/master-apps/`     | Contains the shared configuration applicable to all members of the indexer cluster.      | This directory holds configurations that are common across all nodes in the cluster.                                                                              |
 | `$SPLUNK_HOME/etc/peer-apps/`       | Holds configurations specific to individual cluster members (slaves).       | Introduced in Splunk 9.0, peer-apps replaces slave-apps. If your peer node was upgraded from a pre-9.0 version, the slave-apps directory was renamed to peer-apps during the upgrade process. |
 
+## Indexer Clustering Port Configuration
+
+The table below outlines key ports used in Indexer Clustering. Understanding these ports is essential for configuring network settings and ensuring proper communication within the Splunk environment.
+
+| Port   | Protocol | Function                            | Component                 |
+|--------|----------|-------------------------------------|---------------------------|
+| 8089   | TCP      | Management / REST API               | All Splunk Components    |
+| 9997   | TCP      | Receiving data from forwarders      | Indexer                   |
+| 8080   | TCP      | Cluster replication                 | Indexer cluster peer node|
+| 9887   | TCP      | Cluster replication                 | Indexer cluster peer node|
+

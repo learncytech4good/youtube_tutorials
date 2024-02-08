@@ -381,7 +381,7 @@
 
 ## Command Reference
 
-This documentation provides a set of commands for managing a Splunk clustered environment. These commands help in configuring, validating, applying, and monitoring cluster bundles.
+This table provides a set of commands for managing a Splunk clustered environment. These commands help in configuring, validating, applying, and monitoring cluster bundles.
 
 | Command                               | Description                                      |
 |---------------------------------------|--------------------------------------------------|

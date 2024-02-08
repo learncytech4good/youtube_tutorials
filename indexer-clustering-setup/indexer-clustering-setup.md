@@ -390,3 +390,14 @@ This table provides a set of commands for managing a Splunk clustered environmen
 | `./splunk apply cluster-bundle`       | Apply a cluster bundle in the Splunk environment. |
 | `./splunk show cluster-bundle-status` | Display the status of the cluster bundle on each node. |
 | `./splunk rollback cluster-bundle`    | Rollback or revert the applied cluster bundle to a previous state. |
+
+# Indexer Clustering Directory
+
+## Overview
+The following table outlines key directories in the index clustering file structure, providing insights into the shared and individual configurations for cluster members.
+
+| Directory                           | Description                                                                      | Notes                                                                         |
+|-------------------------------------|----------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| `$SPLUNK_HOME/etc/master-apps/`     | Contains the shared configuration applicable to all members of the indexer cluster.      | This directory holds configurations that are common across all nodes in the cluster.                                                                              |
+| `$SPLUNK_HOME/etc/peer-apps/`       | Holds configurations specific to individual cluster members (slaves).       | Introduced in Splunk 9.0, peer-apps replaces slave-apps. If your peer node was upgraded from a pre-9.0 version, the slave-apps directory was renamed to peer-apps during the upgrade process. |
+

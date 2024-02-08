@@ -4,7 +4,7 @@
 
 This diagram shows a high-level view of the architecture for an indexer cluster.
 
-![indexer_clustering_diagram](https://github.com/mekelz/indexer_cluster/assets/110712766/7e93ded2-dd00-4350-972e-9591c2d8f8fa)
+![indexer_clustering_diagram](https://github.com/learncytech4good/youtube_tutorials/assets/156148981/4a38f9d3-574c-4624-9878-ab797d652fea)
 
 ## Virtual Machine Host Information
 

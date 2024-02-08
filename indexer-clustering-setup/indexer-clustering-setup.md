@@ -377,9 +377,7 @@
 8. **Verification**
    - Verify that the index is reflected on each indexer in the cluster.
 
-# Indexer Clustering Management Commands
-
-## Command Reference
+## Indexer Clustering Management Commands
 
 This table provides a set of commands for managing a Splunk clustered environment. These commands help in configuring, validating, applying, and monitoring cluster bundles.
 
@@ -391,9 +389,8 @@ This table provides a set of commands for managing a Splunk clustered environmen
 | `./splunk show cluster-bundle-status` | Display the status of the cluster bundle on each node. |
 | `./splunk rollback cluster-bundle`    | Rollback or revert the applied cluster bundle to a previous state. |
 
-# Indexer Clustering Directory
+## Indexer Clustering Directory
 
-## Overview
 The following table outlines key directories in the index clustering file structure, providing insights into the shared and individual configurations for cluster members.
 
 | Directory                           | Description                                                                      | Notes                                                                         |

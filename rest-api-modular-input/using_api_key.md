@@ -3,7 +3,9 @@
 
 This documentation guides users through the process of integrating OpenWeatherMap's Current Weather Data API with Splunk, using a REST API Modular Input App. The integration involves obtaining an API key, configuring a new index in Splunk, and setting up the REST API Modular Input App with the obtained key. Additionally, it provides steps to validate the data in Splunk and create a sample dashboard to visualize OpenWeather data.
 
-## How API Key Authentication Works?
+## API Key Illustration
+
+This illustration how API key authentication works. The provided image demonstrates the flow of authentication, showcasing the interaction between the client and server.
 
 ![api_key_authentication](https://github.com/learncytech4good/youtube_tutorials/assets/156148981/7b78b31b-fb60-45e6-9b3d-aaaf08cadf17)
 
